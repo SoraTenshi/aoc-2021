@@ -4,10 +4,7 @@ use aoc_runner_derive::aoc;
 pub fn day1_part1(input: &str) -> usize {
     let depths: Vec<u32> = input.lines().map(|x| x.parse().unwrap()).collect();
     
-    depths
-        .windows(2)
-        .filter(|x| x[0] < x[1])
-        .count()
+    depths.windows(2).filter(|x| x[0] < x[1]).count()
 }
 
 #[aoc(day1, part2)]
